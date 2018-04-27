@@ -18,6 +18,13 @@ This module checks roles and permissions of the current signed in user and disab
 
 
  # Getting started
+ 
+ ## Installation
+  ```javascript
+ npm i ngx-auto-disable-forms
+  ```
+  
+ ## Import
  Just import the module 'NgxAutoDisableFormsModule' in your **'app.module.ts'** file.
   i.e. 
  ```javascript
