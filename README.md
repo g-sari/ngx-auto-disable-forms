@@ -26,4 +26,4 @@ This module checks roles and permissions of the current signed in user and disab
 
 
   # Demo
-  ![ngx-auto-disable-forms-demo](../ngx-auto-disable-forms-demo.gif)
+  ![ngx-auto-disable-forms-demo](/ngx-auto-disable-forms-demo.gif)
