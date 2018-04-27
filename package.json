@@ -1,0 +1,17 @@
+{
+    "name": "ngx-auto-disable-forms",
+    "version": "0.0.1-SNAPSHOT",
+    "author": "Gökhan Sari",
+    "license": "Apache License 2.0",
+    "private": false,
+    "scripts": {
+        "docs": "node_modules/.bin/compodoc -p tsconfig.json -d documentation --theme original --hideGenerator"
+      },
+    "dependencies": {
+        "@angular/core": "5.2.0"
+    },
+    "devDependencies": {
+        "typescript": "2.4.2",
+        "@compodoc/compodoc": "^1.0.1"
+    }
+}
