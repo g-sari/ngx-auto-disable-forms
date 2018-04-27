@@ -1,7 +1,7 @@
 {
     "name": "ngx-auto-disable-forms",
     "description": "Auto disables input elements on demand inside a defined div.",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "author": "Gökhan Sari",
     "license": "Apache License 2.0",
     "private": false,
