@@ -1,6 +1,6 @@
 {
     "name": "ngx-auto-disable-forms",
-    "version": "0.0.1-SNAPSHOT",
+    "version": "0.0.1",
     "author": "Gökhan Sari",
     "license": "Apache License 2.0",
     "private": false,
