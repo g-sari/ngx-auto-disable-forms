@@ -12,7 +12,7 @@ import { UserRolesService } from '../services/user-roles.service';
  * @class
  */
 @Component({})
-export abstract class AbstractRoleBasedViewComponent implements OnInit, AfterViewChecked {
+export abstract class AbstractRolesAndPermissionsBasedComponent implements OnInit, AfterViewChecked {
 
     constructor(private userRolesService: UserRolesService) { }
 
@@ -22,20 +22,5 @@ export abstract class AbstractRoleBasedViewComponent implements OnInit, AfterVie
 
     ngAfterViewChecked(): void { }
 
-    /**
-     * If the read only mode is activated, all input fields should be displayed as only ready only.
-     *
-     * @returns {boolean}
-     */
-    public checkForReadOnlyMode(): boolean {
-        return this.userRolesService.checkForReadOnlyMode();
-    }
-
-    /**
-     * Checks if the current user is a role based user.
-     */
-    protected isCurrentUserRoleBased(): boolean {
-        return this.userRolesService.isCurrentUserRoleBased();
-    }
 
 }

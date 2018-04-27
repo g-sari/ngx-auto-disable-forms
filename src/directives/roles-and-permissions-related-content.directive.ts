@@ -4,7 +4,7 @@
  * @author Gökhan Sari - <g-sari@g-sari.com>                       *
  *******************************************************************/
 import { Directive, Renderer2, ElementRef, AfterViewChecked, ViewContainerRef, OnInit } from '@angular/core';
-import { AbstractRoleBasedViewComponent } from '../components/abstract-role-based-view-component';
+import { AbstractRolesAndPermissionsBasedComponent } from '../components/abstract-roles-and-permissions-based-component';
 
 /**
  * Checks roles and permissions of the current user and disables input fields on demand.
@@ -19,7 +19,7 @@ import { AbstractRoleBasedViewComponent } from '../components/abstract-role-base
 })
 export class RolesAndPermissionsRelatedContentDirective implements OnInit, AfterViewChecked {
 
-    private currentRoleBasedViewComponent: AbstractRoleBasedViewComponent;
+    private currentRolesAndPermissionsBasedComponent: AbstractRolesAndPermissionsBasedComponent;
 
     /**
      * @param renderer 
@@ -36,7 +36,7 @@ export class RolesAndPermissionsRelatedContentDirective implements OnInit, After
      * Gets the current component.
      */
     ngOnInit(): void {
-        this.currentRoleBasedViewComponent = (<any>this.viewContainerRef)._view.component;
+        this.currentRolesAndPermissionsBasedComponent = (<any>this.viewContainerRef)._view.component;
     }
 
     /**
@@ -60,7 +60,7 @@ export class RolesAndPermissionsRelatedContentDirective implements OnInit, After
         if (inputsNodeList != null) {
             for (let i = 0; i < inputsNodeList.length; i++) {
                 const input = inputsNodeList[i];
-                if (this.currentRoleBasedViewComponent.isReadOnly()) {
+                if (this.currentRolesAndPermissionsBasedComponent.isReadOnly()) {
                     this.renderer.setProperty(input, 'disabled', true);
                 }
             }
