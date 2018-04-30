@@ -1,10 +1,10 @@
 {
     "name": "ngx-auto-disable-forms",
-    "version": "0.0.6",
+    "version": "0.0.7",
     "description": "Auto disables input elements on demand inside a defined div.",
     "main": "bundles/ngx-auto-disable-forms.umd.js",
-    "module": "src/index.js",
-    "typings": "src/index.d.ts",
+    "module": "index.js",
+    "typings": "index.d.ts",
     "keywords": [
         "angular",
         "angular2",

@@ -1,5 +1,5 @@
 export default {
-    entry: 'dist/src/index.js',
+    entry: 'dist/index.js',
     dest: 'dist/bundles/ngx-auto-disable-forms.umd.js',
     sourceMap: false,
     format: 'umd',
