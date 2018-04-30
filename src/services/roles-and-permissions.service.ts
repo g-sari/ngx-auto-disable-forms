@@ -4,20 +4,20 @@
  * @author Gökhan Sari - <g-sari@g-sari.com>                       *
  *******************************************************************/
 import { Injectable } from '@angular/core';
-import { UserRolesServiceInterface } from '../interfaces/user-roles-service.interface';
+import { RolesAndPermissionsInterface } from '../interfaces/roles-and-permissions.interface';
 
 /**
  * Provides user roles and permissions related functions.
  */
 @Injectable()
-export class UserRolesService implements UserRolesServiceInterface {
+export class RolesAndPermissionsService<T> implements RolesAndPermissionsInterface<T> {
 
     /**
      * Returns true, if the given user is authorized.
      * 
      * @param user 
      */
-    isAuthorized(user: object): boolean {
+    isAuthorized(user: T): boolean {
         return false;
     }
 
@@ -26,7 +26,7 @@ export class UserRolesService implements UserRolesServiceInterface {
      * 
      * @param user 
      */
-    hasOnlyReadPermissions(user: object): boolean {
+    hasOnlyReadPermissions(user: T): boolean {
         return true;
     }
 
@@ -35,7 +35,7 @@ export class UserRolesService implements UserRolesServiceInterface {
      * 
      * @param user 
      */
-    hasWritePermissions(user: object): boolean {
+    hasWritePermissions(user: T): boolean {
         return false;
     }
 

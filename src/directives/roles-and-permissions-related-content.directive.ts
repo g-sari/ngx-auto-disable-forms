@@ -19,7 +19,7 @@ import { AbstractRolesAndPermissionsBasedComponent } from '../components/abstrac
 })
 export class RolesAndPermissionsRelatedContentDirective implements OnInit, AfterViewChecked {
 
-    private currentRolesAndPermissionsBasedComponent: AbstractRolesAndPermissionsBasedComponent;
+    private currentRolesAndPermissionsBasedComponent: AbstractRolesAndPermissionsBasedComponent<any>;
 
     /**
      * @param renderer 
@@ -60,7 +60,7 @@ export class RolesAndPermissionsRelatedContentDirective implements OnInit, After
         if (inputsNodeList != null) {
             for (let i = 0; i < inputsNodeList.length; i++) {
                 const input = inputsNodeList[i];
-                if (this.currentRolesAndPermissionsBasedComponent.isReadOnly()) {
+                if (this.currentRolesAndPermissionsBasedComponent.isViewReadOnly()) {
                     this.renderer.setProperty(input, 'disabled', true);
                 }
             }

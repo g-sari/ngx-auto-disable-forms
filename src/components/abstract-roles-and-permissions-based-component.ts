@@ -4,23 +4,18 @@
  * @author Gökhan Sari - <g-sari@g-sari.com>                       *
  *******************************************************************/
 import { Component, OnInit, AfterViewChecked, Injector } from '@angular/core';
-import { UserRolesService } from '../services/user-roles.service';
+import { RolesAndPermissionsService } from '../services/roles-and-permissions.service';
+
 
 /**
  * Base class for all roles and permissions based view components in the application.
  *
  * @class
  */
-@Component({})
-export abstract class AbstractRolesAndPermissionsBasedComponent implements OnInit, AfterViewChecked {
+export abstract class AbstractRolesAndPermissionsBasedComponent<T> {
 
-    constructor(private userRolesService: UserRolesService) { }
+    constructor(private rolesAndPermissionsService: RolesAndPermissionsService<T>) { }
 
-    public abstract isReadOnly(): boolean;
-
-    ngOnInit(): void { }
-
-    ngAfterViewChecked(): void { }
-
+    public abstract isViewReadOnly(): boolean;
 
 }

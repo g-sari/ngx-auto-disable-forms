@@ -1,22 +1,31 @@
 {
     "name": "ngx-auto-disable-forms",
     "description": "Auto disables input elements on demand inside a defined div.",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "author": "Gökhan Sari",
     "license": "Apache License 2.0",
     "private": false,
-    "repository" : { 
-        "type" : "git", 
-        "url" : "https://github.com/g-sari/ngx-auto-disable-forms.git"
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/g-sari/ngx-auto-disable-forms.git"
     },
     "scripts": {
-        "docs": "node_modules/.bin/compodoc -p tsconfig.json -d documentation --theme original --hideGenerator"
+        "docs": "node_modules/.bin/compodoc -p tsconfig.json -d documentation --theme original --hideGenerator",
+        "transpile": "ngc",
+        "package": "rollup -c",
+        "minify": "uglifyjs dist/bundles/ngx-auto-disable-forms.umd.js --screw-ie8 --compress --mangle --comments --output dist/bundles/ngx-auto-disable-forms.umd.min.js",
+        "build": "npm run docs && npm run transpile && npm run package && npm run minify"
     },
     "dependencies": {
         "@angular/core": "5.2.0"
     },
     "devDependencies": {
-        "typescript": "2.4.2",
-        "@compodoc/compodoc": "^1.0.1"
+        "@angular/cli": "^1.7.4",
+        "@angular/compiler": "^5.2.10",
+        "@angular/compiler-cli": "^5.2.10",
+        "@compodoc/compodoc": "^1.0.1",
+        "rollup": "^0.58.2",
+        "typescript": "^2.8.3",
+        "uglify-js": "^3.3.23"
     }
 }

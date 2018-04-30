@@ -5,7 +5,9 @@
 bower_components
 node_modules
 build
-dist
+dist/bundles
+dist/node_modules
+dist/src
 etc
 
 .idea
