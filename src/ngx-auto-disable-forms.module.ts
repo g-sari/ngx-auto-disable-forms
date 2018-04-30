@@ -7,7 +7,9 @@ import { NgModule } from '@angular/core';
 import { RolesAndPermissionsRelatedContentDirective } from './directives/roles-and-permissions-related-content.directive';
 import { RolesAndPermissionsService } from './services/roles-and-permissions.service';
 
-
+/**
+ * NGX Auto disabled forms module
+ */
 @NgModule({
     imports: [],
     declarations: [RolesAndPermissionsRelatedContentDirective],

@@ -4,13 +4,13 @@
  * @author Gökhan Sari - <g-sari@g-sari.com>                       *
  *******************************************************************/
 import { Injectable } from '@angular/core';
-import { RolesAndPermissionsInterface } from '../interfaces/roles-and-permissions.interface';
+import { RolesAndPermissionsServiceInterface } from '../interfaces/roles-and-permissions-service.interface';
 
 /**
  * Provides user roles and permissions related functions.
  */
 @Injectable()
-export class RolesAndPermissionsService<T> implements RolesAndPermissionsInterface<T> {
+export class RolesAndPermissionsService<T> implements RolesAndPermissionsServiceInterface<T> {
 
     /**
      * Returns true, if the given user is authorized.

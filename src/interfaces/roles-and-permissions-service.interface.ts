@@ -1,4 +1,13 @@
-export interface RolesAndPermissionsInterface<T> {
+/*******************************************************************
+ * Project: NGX-AUTO-DISABLE_FORMS                                 *
+ * @file File: roles-and-permissions-service.interface.ts          *
+ * @author Gökhan Sari - <g-sari@g-sari.com>                       *
+ *******************************************************************/
+
+/**
+ * Roles and permissions interface for services.
+ */
+export interface RolesAndPermissionsServiceInterface<T> {
 
     /**
      * Checks if the given user is authorized.
