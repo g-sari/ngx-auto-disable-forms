@@ -10,14 +10,14 @@ import { RolesAndPermissionsServiceInterface } from '../interfaces/roles-and-per
  * Provides user roles and permissions related functions.
  */
 @Injectable()
-export class RolesAndPermissionsService<T> implements RolesAndPermissionsServiceInterface<T> {
+export class RolesAndPermissionsService implements RolesAndPermissionsServiceInterface<object> {
 
     /**
      * Returns true, if the given user is authorized.
      * 
      * @param user 
      */
-    isAuthorized(user: T): boolean {
+    isAuthorized(user: object): boolean {
         return false;
     }
 
@@ -26,7 +26,7 @@ export class RolesAndPermissionsService<T> implements RolesAndPermissionsService
      * 
      * @param user 
      */
-    hasOnlyReadPermissions(user: T): boolean {
+    hasOnlyReadPermissions(user: object): boolean {
         return true;
     }
 
@@ -35,7 +35,7 @@ export class RolesAndPermissionsService<T> implements RolesAndPermissionsService
      * 
      * @param user 
      */
-    hasWritePermissions(user: T): boolean {
+    hasWritePermissions(user: object): boolean {
         return false;
     }
 
