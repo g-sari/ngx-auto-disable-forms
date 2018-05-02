@@ -7,7 +7,7 @@
  /**
   * Roles and permissions interface for view components.
   */
-export interface RolesAndPermissionsViewComponentInterface {
+export interface OnRolesAndPermissions {
 
     /**
      * Checks, if the view component should be displayed in read only mode.

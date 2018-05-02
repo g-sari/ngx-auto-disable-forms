@@ -4,7 +4,7 @@
  * @author Gökhan Sari - <g-sari@g-sari.com>                       *
  *******************************************************************/
 import { Directive, Renderer2, ElementRef, AfterViewChecked, ViewContainerRef, OnInit } from '@angular/core';
-import { RolesAndPermissionsViewComponentInterface } from '../interfaces/roles-and-permissions-view-component.interface';
+import { OnRolesAndPermissions } from '../interfaces/on-roles-and-permissions.interface';
 
 /**
  * Checks roles and permissions of the current user and disables input fields on demand.
@@ -19,7 +19,7 @@ import { RolesAndPermissionsViewComponentInterface } from '../interfaces/roles-a
 })
 export class RolesAndPermissionsRelatedContentDirective implements OnInit, AfterViewChecked {
 
-    private currentRolesAndPermissionsBasedComponent: RolesAndPermissionsViewComponentInterface;
+    private currentRolesAndPermissionsBasedComponent: OnRolesAndPermissions;
 
     /**
      * @param renderer 
