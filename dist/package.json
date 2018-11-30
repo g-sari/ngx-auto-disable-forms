@@ -1,17 +1,23 @@
 {
     "name": "ngx-auto-disable-forms",
-    "version": "0.1.0",
-    "description": "Auto disables input elements on demand inside a defined div.",
+    "version": "0.1.1",
+    "description": "Auto disables html input elements on demand inside a defined div.",
     "main": "bundles/ngx-auto-disable-forms.umd.js",
     "module": "index.js",
     "typings": "index.d.ts",
     "keywords": [
         "angular",
-        "angular2",
+        "angular 2",
         "angular 4",
         "angular 5",
         "angular 6",
-        "disable forms"
+        "disable forms",
+        "typescript",
+        "auto disable forms",
+        "angular2",
+        "angular4",
+        "angular5",
+        "angular6"
     ],
     "author": "Gökhan Sari",
     "license": "Apache License 2.0",
@@ -24,7 +30,7 @@
     "bugs": {
         "url": "https://github.com/g-sari/ngx-auto-disable-forms/issues"
     },
-    "peerDependencies": {
-        "@angular/core": "^5.2.0"
+    "dependencies": {
+        "@angular/core": "^4.4.6"
     }
 }
